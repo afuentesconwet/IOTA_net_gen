@@ -93,6 +93,6 @@ done
 #The first manager (coordinator) generates a milestone every 2 minutes.
 while :
 do
-        docker-machine ssh manager1 "java -jar iota-testnet-tools-0.1-SNAPSHOT-jar-with-dependencies.jar Coordinator localhost 14265"
+        docker-machine ssh manager1 "docker exec managercont1 java -jar iota-testnet-tools-0.1-SNAPSHOT-jar-with-dependencies.jar Coordinator localhost 14265"
         sleep 120
 done
